@@ -21,3 +21,9 @@ ls
 git clone --depth=1 --single-branch https://github.com/CoolGuyMK/device-xiaomi-davinci.git -b palladium device/xiaomi/davinci
 git clone --depth=1 --single-branch https://github.com/Laker87/VantomKernel -b VantomKernel-R5 kernel/xiaomi/sm6150
 git clone --depth=1 --single-branch https://github.com/CoolGuyMK/vendor-xiaomi-davinci.git -b eleven vendor/xiaomi/davinci
+rm -rf hardware/qcom-caf/sm8150/audio && rm -rf hardware/qcom-caf/sm8150/display && rm -rf hardware/qcom-caf/sm8150/media && rm -rf hardware/xiaomi
+git clone https://github.com/CoolGuyMK/hardware-qcom-caf-sm8150-display hardware/qcom-caf/sm8150/display
+git clone https://github.com/CoolGuyMK/hardware-qcom-caf-sm8150-audio hardware/qcom-caf/sm8150/audio
+git clone https://github.com/CoolGuyMK/hardware-qcom-caf-sm8150-media hardware/qcom-caf/sm8150/media
+git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi 
+git clone https://github.com/kdrag0n/proton-clang prebuilts/clang/host/linux-x86/clang-proton --depth=13 && cd prebuilts/clang/host/linux-x86/clang-proton && git reset --hard 8663d1ddacc7b832a5668cc4734d2060b2998e3c && cd .. && cd .. && cd .. && cd .. && cd ..
