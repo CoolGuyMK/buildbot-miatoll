@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt install wget
-MANIFEST=https://github.com/RohieOS/manifest
-BRANCH=11
+MANIFEST=https://github.com/Bootleggers-BrokenLab/manifest.git
+BRANCH=rimbon
 
 mkdir -p /tmp/rom
 cd /tmp/rom
@@ -18,7 +18,7 @@ pwd
 ls
 
 #delete files below and sync your own sauces
-git clone --depth=1 --single-branch https://github.com/CoolGuyMK/device-xiaomi-davinci.git device/xiaomi/davinci
+git clone --depth=1 --single-branch https://github.com/CoolGuyMK/device-xiaomi-davinci.git -b bootleg device/xiaomi/davinci
 git clone --depth=1 --single-branch https://github.com/CoolGuyMK/kernel_xiaomi_sm6150 kernel/xiaomi/sm6150
 git clone --depth=1 --single-branch https://github.com/CoolGuyMK/vendor-xiaomi-davinci.git -b eleven vendor/xiaomi/davinci
 rm -rf hardware/qcom-caf/sm8150/audio && rm -rf hardware/qcom-caf/sm8150/display && rm -rf hardware/qcom-caf/sm8150/media && rm -rf hardware/xiaomi
@@ -27,3 +27,4 @@ git clone https://github.com/CoolGuyMK/hardware-qcom-caf-sm8150-audio hardware/q
 git clone https://github.com/CoolGuyMK/hardware-qcom-caf-sm8150-media hardware/qcom-caf/sm8150/media
 git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi 
 git clone https://github.com/kdrag0n/proton-clang prebuilts/clang/host/linux-x86/clang-proton --depth=13 && cd prebuilts/clang/host/linux-x86/clang-proton && git reset --hard 8663d1ddacc7b832a5668cc4734d2060b2998e3c && cd .. && cd .. && cd .. && cd .. && cd ..
+git clone https://gitlab.com/spkal01/vendor_aenoax_anxcamera vendor/aeonax/ANXCamera
